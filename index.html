@@ -7,131 +7,84 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=3" />
+<link rel="stylesheet" href="styles.css?v=4" />
 </head>
 <body>
 
-<!-- ============ SHARED ERA-ACCURATE SVG LOGO SYMBOLS ============ -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <linearGradient id="chrome98" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#ffffff"/><stop offset=".35" stop-color="#9aa6b5"/>
-      <stop offset=".55" stop-color="#f5f7fa"/><stop offset="1" stop-color="#4e5866"/>
-    </linearGradient>
-    <linearGradient id="bimetallic2010" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#ffffff"/><stop offset=".3" stop-color="#c4ccd6"/>
-      <stop offset=".52" stop-color="#5d6673"/><stop offset=".75" stop-color="#e8edf2"/>
-      <stop offset="1" stop-color="#3c434d"/>
-    </linearGradient>
-
-    <!-- 1975 "Lion Fil": angular hollow geometric rampant lion outline (1981–1997) -->
-    <symbol id="lion-1975" viewBox="0 0 110 125">
-      <path d="M54 8 L61 18 L72 15 L67 28 L79 36 L69 43 L76 57 L64 63 L72 82 L63 116 L53 116 L58 88 L47 90 L42 116 L32 116 L40 84 L29 73 L21 53 L30 32 L44 20 Z" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="miter"/>
-      <path d="M29 73 L13 66 L7 75 L18 78 L27 86" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="miter"/>
-      <path d="M72 82 L88 92 L96 82 L92 102 L78 97" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="miter"/>
-    </symbol>
-
-    <!-- 1998 Solid 3D Chrome Lion in classic Peugeot Blue Box / Crest (1998–2009) -->
-    <symbol id="lion-1998" viewBox="0 0 120 132">
-      <rect x="6" y="6" width="108" height="120" rx="8" fill="none" stroke="currentColor" stroke-width="4" opacity=".65"/>
-      <path d="M58 18 L66 28 L78 24 L72 37 L84 46 L74 52 L81 66 L69 72 L77 90 L68 118 L57 118 L62 94 L50 96 L45 118 L34 118 L43 90 L32 79 L24 58 L34 38 L48 27 Z M32 79 L16 72 L11 81 L22 84 L31 92 Z M77 90 L93 99 L101 89 L97 108 L83 103 Z" fill="url(#chrome98)"/>
-    </symbol>
-
-    <!-- 2010 Sculpted Bimetallic Floating Lion (2010–2020) -->
-    <symbol id="lion-2010" viewBox="0 0 110 125">
-      <path d="M55 8 C62 15 69 13 74 17 C72 26 82 32 82 40 C75 45 81 55 75 63 C71 72 78 86 67 116 L55 116 C59 95 57 88 49 89 C45 99 44 108 40 116 L29 116 C36 93 38 82 28 73 C18 62 20 43 32 29 C40 20 47 14 55 8 Z M28 73 L11 66 L7 77 L21 82 L29 90 Z M73 82 L91 92 L99 81 L94 102 L79 97 Z" fill="url(#bimetallic2010)"/>
-    </symbol>
-
-    <!-- 2021 Neo-Retro Coat-of-Arms Shield with Roaring Lion Head (2021–Today) -->
-    <symbol id="shield-2021" viewBox="0 0 100 120">
-      <path d="M8 6 H92 V64 C92 92 70 108 50 116 C30 108 8 92 8 64 Z" fill="none" stroke="currentColor" stroke-width="5"/>
-      <path d="M26 30 L45 21 L63 23 L76 36 L71 48 L79 56 L66 60 L71 75 L56 71 L50 86 L43 71 L29 75 L35 60 L23 54 L31 46 Z" fill="currentColor"/>
-      <path d="M52 36 L65 38 L59 45 Z" fill="#07080a"/>
-    </symbol>
-
-    <!-- Peugeot Sport 3 Kryptonite Claw Marks (PSE / 9X8 identity) -->
-    <symbol id="claws-pse" viewBox="0 0 80 48">
-      <polygon points="10,46 24,2 34,2 20,46" fill="currentColor"/>
-      <polygon points="32,46 46,2 56,2 42,46" fill="currentColor"/>
-      <polygon points="54,46 68,2 78,2 64,46" fill="currentColor"/>
-    </symbol>
-  </defs>
-</svg>
-
-<!-- ============ FIXED ERA BACKGROUND STAGE (colors + blended real champion & car photos + logos) ============ -->
+<!-- ============ FIXED ERA BACKGROUND STAGE (colors + blended real champion & car photos + official era logos) ============ -->
 <div id="bg" aria-hidden="true">
   <div class="bg-layer" data-era="splash"></div>
 
-  <!-- 9X8: Blended Jean-Éric Vergne + Le Mans 9X8 wash + Selenium Grey & Kryptonite claws -->
+  <!-- 9X8: Blended Jean-Éric Vergne + Le Mans 9X8 wash + Official 2021 Peugeot Shield & Peugeot Sport -->
   <div class="bg-layer" data-era="9x8">
     <div class="bg-car-wash" style="background-image:url('assets/photos/car_9x8.jpg')"></div>
     <div class="bg-driver dark-blend" style="background-image:url('assets/photos/drv_vergne.jpg')"></div>
     <div class="pattern claws"></div>
     <img class="giant-logo real-shield" src="assets/logos/peugeot_shield_2021.svg" alt="" />
-    <svg class="aux-logo"><use href="#claws-pse"/></svg>
+    <img class="aux-logo real-aux" src="assets/logos/peugeot_sport_light.svg" alt="" />
     <div class="era-word">PEUGEOT SPORT 9X8</div>
   </div>
 
-  <!-- 1981: Blended Jean Todt (PTS founder) + 205 T16 wash + PTS 4-color stripes + 1975 Lion Fil -->
+  <!-- 1981: Blended Jean Todt (PTS founder) + 205 T16 wash + PTS 4-color stripes + Official 1976–1998 Peugeot Logo -->
   <div class="bg-layer" data-era="1981">
     <div class="bg-car-wash light-wash" style="background-image:url('assets/photos/car_205t16.jpg')"></div>
     <div class="bg-driver light-blend" style="background-image:url('assets/photos/drv_todt.jpg')"></div>
     <div class="pattern talbot-stripes"></div>
-    <svg class="giant-logo"><use href="#lion-1975"/></svg>
+    <img class="giant-logo era-svg on-light" src="assets/logos/peugeot_1976_1998.svg" alt="" />
     <div class="era-word">PEUGEOT TALBOT SPORT</div>
   </div>
 
-  <!-- 1987: Blended Ari Vatanen + 405 T16 Pikes Peak wash + Camel Yellow/Dunes + 1975 Lion Fil -->
+  <!-- 1987: Blended Ari Vatanen + 405 T16 Pikes Peak wash + Camel Yellow/Dunes + Official 1976–1998 Peugeot Logo -->
   <div class="bg-layer" data-era="1987">
     <div class="bg-car-wash" style="background-image:url('assets/photos/car_405t16.jpg')"></div>
     <div class="bg-driver dark-blend" style="background-image:url('assets/photos/drv_vatanen.jpg')"></div>
     <div class="pattern dunes"></div>
-    <svg class="giant-logo"><use href="#lion-1975"/></svg>
+    <img class="giant-logo era-svg on-dark" src="assets/logos/peugeot_1976_1998.svg" alt="" />
     <div class="era-word">DAKAR · PIKES PEAK</div>
   </div>
 
-  <!-- 1990: Blended Derek Warwick (1992 Le Mans winner) + 905 wash + Esso/Peugeot Night Blue -->
+  <!-- 1990: Blended Derek Warwick (1992 Le Mans winner) + 905 wash + Official 1992–1998 Peugeot Sport Logo -->
   <div class="bg-layer" data-era="1990">
     <div class="bg-car-wash" style="background-image:url('assets/photos/car_905.jpg')"></div>
     <div class="bg-driver dark-blend" style="background-image:url('assets/photos/drv_warwick.jpg')"></div>
     <div class="pattern sportscar"></div>
-    <svg class="giant-logo"><use href="#lion-1975"/></svg>
+    <img class="giant-logo era-svg wide on-dark" src="assets/logos/peugeot_sport_1992_1998.svg" alt="" />
     <div class="era-word">905 · LE MANS</div>
   </div>
 
-  <!-- 1994: Blended Mika Häkkinen + McLaren MP4/9 wash + McLaren/Jordan/Prost tri-color -->
+  <!-- 1994: Blended Mika Häkkinen + McLaren MP4/9 wash + Official 1992–1998 Peugeot Sport Logo -->
   <div class="bg-layer" data-era="1994">
     <div class="bg-car-wash light-wash" style="background-image:url('assets/photos/car_f1.jpg')"></div>
     <div class="bg-driver light-blend" style="background-image:url('assets/photos/drv_hakkinen.jpg')"></div>
     <div class="pattern f1grid"></div>
-    <svg class="giant-logo"><use href="#lion-1975"/></svg>
+    <img class="giant-logo era-svg wide on-light" src="assets/logos/peugeot_sport_1992_1998.svg" alt="" />
     <div class="era-word">FORMULA 1 · V10</div>
   </div>
 
-  <!-- 1999: Blended Marcus Grönholm (2x WRC Champ) + 206 WRC wash + Silver Bullet + 1998 Chrome Lion -->
+  <!-- 1999: Blended Marcus Grönholm (2x WRC Champ) + 206 WRC wash + Official 1998–2002 Peugeot Sport Logo -->
   <div class="bg-layer" data-era="1999">
     <div class="bg-car-wash light-wash" style="background-image:url('assets/photos/car_206wrc.jpg')"></div>
     <div class="bg-driver light-blend" style="background-image:url('assets/photos/drv_gronholm.jpg')"></div>
     <div class="pattern wrc"></div>
-    <svg class="giant-logo solid"><use href="#lion-1998"/></svg>
+    <img class="giant-logo era-svg wide on-light" src="assets/logos/peugeot_sport_1998_2002.svg" alt="" />
     <div class="era-word">206 WRC</div>
   </div>
 
-  <!-- 2007: Blended Alexander Wurz (2009 Le Mans Champ) + 908 HDi FAP wash + Carbon Weave -->
+  <!-- 2007: Blended Alexander Wurz (2009 Le Mans Champ) + 908 HDi FAP wash + Official 2002–2010 Peugeot Sport Logo -->
   <div class="bg-layer" data-era="2007">
     <div class="bg-car-wash" style="background-image:url('assets/photos/car_908.jpg')"></div>
     <div class="bg-driver dark-blend" style="background-image:url('assets/photos/drv_wurz.jpg')"></div>
     <div class="pattern carbon"></div>
-    <svg class="giant-logo solid"><use href="#lion-2010"/></svg>
+    <img class="giant-logo era-svg wide on-dark" src="assets/logos/peugeot_sport_2002_2010.svg" alt="" />
     <div class="era-word">908 HDi FAP</div>
   </div>
 
-  <!-- 2013: Blended Sébastien Loeb (Pikes Peak Record) + 208 T16 wash + Total Crimson & Red Bull Navy -->
+  <!-- 2013: Blended Sébastien Loeb (Pikes Peak Record) + 208 T16 wash + Official 2010–2020 Sculpted Bimetallic Lion -->
   <div class="bg-layer" data-era="2013">
     <div class="bg-car-wash" style="background-image:url('assets/photos/car_208pp.jpg')"></div>
     <div class="bg-driver dark-blend" style="background-image:url('assets/photos/drv_loeb.jpg')"></div>
     <div class="pattern desert-red"></div>
-    <svg class="giant-logo solid"><use href="#lion-2010"/></svg>
+    <img class="giant-logo era-svg on-dark" src="assets/logos/peugeot_2010_2020.svg" alt="" />
     <div class="era-word">PIKES PEAK · DKR</div>
   </div>
 
@@ -543,7 +496,7 @@
 </main>
 
 <footer>
-  Fan-made motorsport history showcase. Historical photography sourced from Wikimedia Commons (CC / Public Domain). Background emblems are stylised, era-inspired artworks.
+  Fan-made motorsport history showcase. Historical photography and archival Peugeot / Peugeot Sport emblems sourced from Wikimedia Commons &amp; Wikipedia.
 </footer>
 
 <script src="script.js"></script>

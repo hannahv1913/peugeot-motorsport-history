@@ -98,12 +98,30 @@ img { max-width: 100%; display: block; }
 .giant-logo.solid { opacity: .18; }
 .giant-logo.real-shield {
   object-fit: contain;
-  opacity: .16;
+  opacity: .18;
   filter: drop-shadow(0 0 34px rgba(191, 221, 11, .25));
 }
+.giant-logo.era-svg {
+  object-fit: contain;
+  width: 48vmin; height: 52vmin;
+  right: 3vw; top: 52%;
+  opacity: .22;
+}
+.giant-logo.era-svg.wide {
+  width: 58vmin; height: 34vmin;
+}
+.giant-logo.era-svg.on-dark {
+  opacity: .24;
+  filter: drop-shadow(0 8px 28px rgba(0, 0, 0, .35));
+}
+.giant-logo.era-svg.on-light {
+  opacity: .19;
+  mix-blend-mode: multiply;
+}
 .aux-logo {
-  position: absolute; width: 20vmin; height: 12vmin; left: 4vw; top: 14vh;
-  color: #a4e82c; opacity: .18;
+  position: absolute; width: 28vmin; height: auto; left: 4vw; top: 14vh;
+  opacity: .22;
+  object-fit: contain;
   transform: translateY(calc(var(--par, 0px) * -0.4));
   pointer-events: none;
 }
