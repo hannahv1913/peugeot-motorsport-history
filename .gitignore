@@ -1,0 +1,17 @@
+# Temporary image-fetch & cutout helper scripts / candidates
+*.py
+cutout_map.json
+assets/photos/fix_cands/
+assets/photos/car_205t16_dyn.jpg
+assets/photos/car_405t16_wiki.jpg
+assets/photos/car_905_track.jpg
+assets/photos/car_908_dyn.jpg
+assets/photos/car_908_track.jpg
+assets/photos/car_9x8_dyn.jpg
+assets/photos/car_206wrc_action.jpg
+assets/photos/car_f1_dyn.jpg
+assets/photos/car_f1_jordan.jpg
+assets/photos/f1_track_*.jpg
+.agents/
+.DS_Store
+Thumbs.db

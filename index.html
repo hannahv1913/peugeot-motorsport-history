@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Peugeot Sport — A Motorsport History</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css?v=3" />
+</head>
+<body>
+
+<!-- ============ SHARED ERA-ACCURATE SVG LOGO SYMBOLS ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="chrome98" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset=".35" stop-color="#9aa6b5"/>
+      <stop offset=".55" stop-color="#f5f7fa"/><stop offset="1" stop-color="#4e5866"/>
+    </linearGradient>
+    <linearGradient id="bimetallic2010" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset=".3" stop-color="#c4ccd6"/>
+      <stop offset=".52" stop-color="#5d6673"/><stop offset=".75" stop-color="#e8edf2"/>
+      <stop offset="1" stop-color="#3c434d"/>
+    </linearGradient>
+
+    <!-- 1975 "Lion Fil": angular hollow geometric rampant lion outline (1981–1997) -->
+    <symbol id="lion-1975" viewBox="0 0 110 125">
+      <path d="M54 8 L61 18 L72 15 L67 28 L79 36 L69 43 L76 57 L64 63 L72 82 L63 116 L53 116 L58 88 L47 90 L42 116 L32 116 L40 84 L29 73 L21 53 L30 32 L44 20 Z" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="miter"/>
+      <path d="M29 73 L13 66 L7 75 L18 78 L27 86" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="miter"/>
+      <path d="M72 82 L88 92 L96 82 L92 102 L78 97" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="miter"/>
+    </symbol>
+
+    <!-- 1998 Solid 3D Chrome Lion in classic Peugeot Blue Box / Crest (1998–2009) -->
+    <symbol id="lion-1998" viewBox="0 0 120 132">
+      <rect x="6" y="6" width="108" height="120" rx="8" fill="none" stroke="currentColor" stroke-width="4" opacity=".65"/>
+      <path d="M58 18 L66 28 L78 24 L72 37 L84 46 L74 52 L81 66 L69 72 L77 90 L68 118 L57 118 L62 94 L50 96 L45 118 L34 118 L43 90 L32 79 L24 58 L34 38 L48 27 Z M32 79 L16 72 L11 81 L22 84 L31 92 Z M77 90 L93 99 L101 89 L97 108 L83 103 Z" fill="url(#chrome98)"/>
+    </symbol>
+
+    <!-- 2010 Sculpted Bimetallic Floating Lion (2010–2020) -->
+    <symbol id="lion-2010" viewBox="0 0 110 125">
+      <path d="M55 8 C62 15 69 13 74 17 C72 26 82 32 82 40 C75 45 81 55 75 63 C71 72 78 86 67 116 L55 116 C59 95 57 88 49 89 C45 99 44 108 40 116 L29 116 C36 93 38 82 28 73 C18 62 20 43 32 29 C40 20 47 14 55 8 Z M28 73 L11 66 L7 77 L21 82 L29 90 Z M73 82 L91 92 L99 81 L94 102 L79 97 Z" fill="url(#bimetallic2010)"/>
+    </symbol>
+
+    <!-- 2021 Neo-Retro Coat-of-Arms Shield with Roaring Lion Head (2021–Today) -->
+    <symbol id="shield-2021" viewBox="0 0 100 120">
+      <path d="M8 6 H92 V64 C92 92 70 108 50 116 C30 108 8 92 8 64 Z" fill="none" stroke="currentColor" stroke-width="5"/>
+      <path d="M26 30 L45 21 L63 23 L76 36 L71 48 L79 56 L66 60 L71 75 L56 71 L50 86 L43 71 L29 75 L35 60 L23 54 L31 46 Z" fill="currentColor"/>
+      <path d="M52 36 L65 38 L59 45 Z" fill="#07080a"/>
+    </symbol>
+
+    <!-- Peugeot Sport 3 Kryptonite Claw Marks (PSE / 9X8 identity) -->
+    <symbol id="claws-pse" viewBox="0 0 80 48">
+      <polygon points="10,46 24,2 34,2 20,46" fill="currentColor"/>
+      <polygon points="32,46 46,2 56,2 42,46" fill="currentColor"/>
+      <polygon points="54,46 68,2 78,2 64,46" fill="currentColor"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ============ FIXED ERA BACKGROUND STAGE (colors + blended real champion & car photos + logos) ============ -->
+<div id="bg" aria-hidden="true">
+  <div class="bg-layer" data-era="splash"></div>
+
+  <!-- 9X8: Blended Jean-Éric Vergne + Le Mans 9X8 wash + Selenium Grey & Kryptonite claws -->
+  <div class="bg-layer" data-era="9x8">
+    <div class="bg-car-wash" style="background-image:url('assets/photos/car_9x8.jpg')"></div>
+    <div class="bg-driver dark-blend" style="background-image:url('assets/photos/drv_vergne.jpg')"></div>
+    <div class="pattern claws"></div>
+    <img class="giant-logo real-shield" src="assets/logos/peugeot_shield_2021.svg" alt="" />
+    <svg class="aux-logo"><use href="#claws-pse"/></svg>
+    <div class="era-word">PEUGEOT SPORT 9X8</div>
+  </div>
+
+  <!-- 1981: Blended Jean Todt (PTS founder) + 205 T16 wash + PTS 4-color stripes + 1975 Lion Fil -->
+  <div class="bg-layer" data-era="1981">
+    <div class="bg-car-wash light-wash" style="background-image:url('assets/photos/car_205t16.jpg')"></div>
+    <div class="bg-driver light-blend" style="background-image:url('assets/photos/drv_todt.jpg')"></div>
+    <div class="pattern talbot-stripes"></div>
+    <svg class="giant-logo"><use href="#lion-1975"/></svg>
+    <div class="era-word">PEUGEOT TALBOT SPORT</div>
+  </div>
+
+  <!-- 1987: Blended Ari Vatanen + 405 T16 Pikes Peak wash + Camel Yellow/Dunes + 1975 Lion Fil -->
+  <div class="bg-layer" data-era="1987">
+    <div class="bg-car-wash" style="background-image:url('assets/photos/car_405t16.jpg')"></div>
+    <div class="bg-driver dark-blend" style="background-image:url('assets/photos/drv_vatanen.jpg')"></div>
+    <div class="pattern dunes"></div>
+    <svg class="giant-logo"><use href="#lion-1975"/></svg>
+    <div class="era-word">DAKAR · PIKES PEAK</div>
+  </div>
+
+  <!-- 1990: Blended Derek Warwick (1992 Le Mans winner) + 905 wash + Esso/Peugeot Night Blue -->
+  <div class="bg-layer" data-era="1990">
+    <div class="bg-car-wash" style="background-image:url('assets/photos/car_905.jpg')"></div>
+    <div class="bg-driver dark-blend" style="background-image:url('assets/photos/drv_warwick.jpg')"></div>
+    <div class="pattern sportscar"></div>
+    <svg class="giant-logo"><use href="#lion-1975"/></svg>
+    <div class="era-word">905 · LE MANS</div>
+  </div>
+
+  <!-- 1994: Blended Mika Häkkinen + McLaren MP4/9 wash + McLaren/Jordan/Prost tri-color -->
+  <div class="bg-layer" data-era="1994">
+    <div class="bg-car-wash light-wash" style="background-image:url('assets/photos/car_f1.jpg')"></div>
+    <div class="bg-driver light-blend" style="background-image:url('assets/photos/drv_hakkinen.jpg')"></div>
+    <div class="pattern f1grid"></div>
+    <svg class="giant-logo"><use href="#lion-1975"/></svg>
+    <div class="era-word">FORMULA 1 · V10</div>
+  </div>
+
+  <!-- 1999: Blended Marcus Grönholm (2x WRC Champ) + 206 WRC wash + Silver Bullet + 1998 Chrome Lion -->
+  <div class="bg-layer" data-era="1999">
+    <div class="bg-car-wash light-wash" style="background-image:url('assets/photos/car_206wrc.jpg')"></div>
+    <div class="bg-driver light-blend" style="background-image:url('assets/photos/drv_gronholm.jpg')"></div>
+    <div class="pattern wrc"></div>
+    <svg class="giant-logo solid"><use href="#lion-1998"/></svg>
+    <div class="era-word">206 WRC</div>
+  </div>
+
+  <!-- 2007: Blended Alexander Wurz (2009 Le Mans Champ) + 908 HDi FAP wash + Carbon Weave -->
+  <div class="bg-layer" data-era="2007">
+    <div class="bg-car-wash" style="background-image:url('assets/photos/car_908.jpg')"></div>
+    <div class="bg-driver dark-blend" style="background-image:url('assets/photos/drv_wurz.jpg')"></div>
+    <div class="pattern carbon"></div>
+    <svg class="giant-logo solid"><use href="#lion-2010"/></svg>
+    <div class="era-word">908 HDi FAP</div>
+  </div>
+
+  <!-- 2013: Blended Sébastien Loeb (Pikes Peak Record) + 208 T16 wash + Total Crimson & Red Bull Navy -->
+  <div class="bg-layer" data-era="2013">
+    <div class="bg-car-wash" style="background-image:url('assets/photos/car_208pp.jpg')"></div>
+    <div class="bg-driver dark-blend" style="background-image:url('assets/photos/drv_loeb.jpg')"></div>
+    <div class="pattern desert-red"></div>
+    <svg class="giant-logo solid"><use href="#lion-2010"/></svg>
+    <div class="era-word">PIKES PEAK · DKR</div>
+  </div>
+
+  <div class="bg-layer" data-era="outro">
+    <img class="giant-logo real-shield" src="assets/logos/peugeot_shield_2021.svg" alt="" />
+  </div>
+  <div class="bg-grain"></div>
+</div>
+
+<!-- ============ LIVE ERA HUD BADGE & TIMELINE NAV ============ -->
+<header id="eraHud" aria-live="polite">
+  <span class="hud-dot"></span>
+  <span id="hudDivision">PEUGEOT SPORT</span>
+  <span class="hud-sep">/</span>
+  <span id="hudYears">2022 — TODAY</span>
+</header>
+
+<nav id="timeline" aria-label="Eras">
+  <a href="#nine-x-eight" data-target="9x8"><span>9X8</span></a>
+  <a href="#era-1981" data-target="1981"><span>1981</span></a>
+  <a href="#era-1987" data-target="1987"><span>1987</span></a>
+  <a href="#era-1990" data-target="1990"><span>1990</span></a>
+  <a href="#era-1994" data-target="1994"><span>1994</span></a>
+  <a href="#era-1999" data-target="1999"><span>1999</span></a>
+  <a href="#era-2007" data-target="2007"><span>2007</span></a>
+  <a href="#era-2013" data-target="2013"><span>2013</span></a>
+</nav>
+<div id="progress"></div>
+
+<main>
+  <!-- ============ 1. INTRO VIDEO -> PEUGEOT SPORT SPLASH ============ -->
+  <section id="intro" data-era="splash" data-division="PEUGEOT SPORT" data-years="1981 — TODAY">
+    <div class="intro-stage">
+      <video id="introVideo" src="assets/intro.mp4" autoplay muted playsinline preload="auto"></video>
+      <div class="video-vignette"></div>
+      <div class="splash">
+        <div class="splash-brand">
+          <img class="splash-shield-img" src="assets/logos/peugeot_shield_2021.svg" alt="Peugeot official coat-of-arms lion shield" />
+          <img class="splash-wordmark-img" src="assets/logos/peugeot_sport_light.svg" alt="Peugeot Sport official logo" />
+        </div>
+        <h1 class="sr-only">Peugeot Sport</h1>
+        <p class="splash-sub">Four decades of Group B, Dakar, Le Mans, Formula 1 &amp; Hypercar</p>
+      </div>
+      <button id="soundToggle" class="chip" aria-label="Toggle sound" aria-pressed="false">
+        <svg class="ic ic-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+        <svg class="ic ic-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+        <span class="chip-label">Sound off</span>
+      </button>
+      <button id="replayIntro" class="chip mid" aria-label="Replay intro">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+        <span>Replay</span>
+      </button>
+      <button id="skipIntro" class="chip right">
+        <span>Skip intro</span>
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+      </button>
+      <div class="scroll-hint"><span></span>Scroll to explore</div>
+    </div>
+  </section>
+
+  <!-- ============ 2. 9X8 PROJECT (2022–TODAY) ============ -->
+  <section id="nine-x-eight" class="era" data-era="9x8" data-division="PEUGEOT SPORT · WEC" data-years="2022 — TODAY">
+    <div class="era-head reveal">
+      <h2>The <em>9X8</em> Project</h2>
+      <p class="era-years">2022 — Today · FIA WEC Hypercar</p>
+      <p class="lede">Peugeot's bold return to the 24 Hours of Le Mans and the FIA World Endurance Championship. Conceived around a radical aerodynamic thesis: a top-class hybrid Hypercar engineered with <strong>no rear wing</strong>.</p>
+    </div>
+
+    <div class="grid-2 burst-layout burst-left">
+      <div class="car-burst from-left" data-burst="left">
+        <div class="burst-streak"></div>
+        <img class="cutout-car" src="assets/cutouts/cutout_9x8.png" alt="Peugeot 9X8 #94 Hypercar bursting onto track" />
+        <div class="burst-shadow"></div>
+        <span class="burst-caption">2024 #94 Peugeot 9X8 Hypercar — "Pack of Lions" WEC livery</span>
+      </div>
+      <div class="stats reveal">
+        <div class="stat"><b>2.6L</b><span>90° Twin-turbo V6</span></div>
+        <div class="stat"><b>500 kW</b><span>Combined hybrid cap (V6 throttles back when MGU engages)</span></div>
+        <div class="stat"><b>200 kW</b><span>Front-axle electric MGU (deployed at high speed, 900V Saft battery)</span></div>
+        <div class="stat"><b>2022</b><span>Race debut — 6 Hours of Monza</span></div>
+      </div>
+    </div>
+
+    <div class="champ-strip reveal">
+      <div class="champ-card">
+        <img src="assets/photos/drv_vergne.jpg" alt="Jean-Éric Vergne" loading="lazy" />
+        <div><span class="tag">Lead Driver · #93</span><h4>Jean-Éric Vergne</h4><p>Two-time Formula E Champion spearheading the 9X8 Hypercar programme since its 2022 Monza debut.</p></div>
+      </div>
+      <div class="champ-card concept-thumb">
+        <img src="assets/photos/pack_of_lions.jpg" alt="2024 Peugeot 9X8 Pack of Lions official WEC livery" loading="lazy" />
+        <div><span class="tag">2024 9X8 Livery · Official Design</span><h4>"Pack of Lions" Livery</h4><p>Chalk White, Selenium Grey, Obsidian Black &amp; Kryptonite lion-head graphics debuting on the 2024 winged 9X8.</p></div>
+      </div>
+    </div>
+
+    <div class="cards reveal">
+      <article class="card"><h3>Wingless Ground Effect</h3><p>The original 2022–23 9X8 generated downforce primarily through its underfloor, scoring its first WEC podium with 3rd at the 2023 6 Hours of Monza.</p></article>
+      <article class="card"><h3>2024 Winged Evolution</h3><p>Debuting at Imola 2024 with ~90% revised bodywork, staggered tyres, and a conventional rear wing, the evolved 9X8 claimed podiums at Bahrain 2024 (3rd) and Fuji 2025 (2nd).</p></article>
+      <article class="card"><h3>Hybrid Four-Wheel Drive</h3><p>Rear-wheel-drive V6 paired with a front electric motor-generator unit under Hypercar Balance of Performance regulations, wearing the 2021 neo-retro lion shield.</p></article>
+    </div>
+
+    <h3 class="sub reveal">9X8 Race Drivers (2022–2025)</h3>
+    <ul class="drivers reveal">
+      <li><b>#93 / #94</b> Paul di Resta</li><li><b>#93</b> Mikkel Jensen</li><li><b>#93</b> Jean-Éric Vergne</li>
+      <li><b>#94</b> Loïc Duval</li><li><b>#94</b> Gustavo Menezes</li><li><b>#93 / #94</b> Nico Müller</li>
+      <li><b>#94</b> Stoffel Vandoorne</li><li><b>#94</b> Malthe Jakobsen</li>
+      <li><b>#94</b> James Rossiter</li><li><b>#94</b> Théo Pourchaire</li>
+    </ul>
+  </section>
+
+  <!-- ============ 3. 1981 — GROUP B RALLY ============ -->
+  <section id="era-1981" class="era" data-era="1981" data-division="PEUGEOT TALBOT SPORT" data-years="1981 — 1986">
+    <div class="era-head reveal">
+      <h2>Group B <em>Glory</em></h2>
+      <p class="era-years">1981 — 1986 · World Rally Championship</p>
+      <p class="lede">In October 1981 Jean Todt founded <strong>Peugeot Talbot Sport</strong>. Three years later the mid-engined, four-wheel-drive <strong>205 Turbo 16</strong> exploded onto the World Rally Championship — wearing the iconic four-color PTS stripes and 1975 "Lion Fil" outline.</p>
+    </div>
+
+    <div class="era-showcase burst-left">
+      <div class="car-burst from-left" data-burst="left">
+        <div class="burst-streak"></div>
+        <img class="cutout-car" src="assets/cutouts/cutout_205t16.png" alt="1985 Peugeot 205 Turbo 16 Evolution 2 Group B rally car cutout" loading="lazy" />
+        <div class="burst-shadow"></div>
+        <span class="burst-caption">1985 Peugeot 205 Turbo 16 Evolution 2 — PTS 4-color rally icon</span>
+      </div>
+      <div class="cars reveal">
+        <article class="car-card"><span class="tag">1984 · XU8T 1,775 cc</span><h3>205 Turbo 16</h3><p>Debuted at the 1984 Tour de Corse. Mid-mounted 1.8L twin-cam 16V turbo inline-4 (~350 hp), full-time 4WD, and 200 homologation road cars based on the compact 205 hatchback.</p></article>
+        <article class="car-card"><span class="tag">1985 · ~450–500+ hp</span><h3>205 T16 Evolution 2</h3><p>Lighter, wider, and far more aggressive — crowned by a massive roof wing and front dive planes. Dominated the final two seasons of Group B.</p></article>
+      </div>
+    </div>
+
+    <div class="champ-strip reveal">
+      <div class="champ-card">
+        <img src="assets/photos/drv_todt.jpg" alt="Jean Todt" loading="lazy" />
+        <div><span class="tag">Founder · 1981</span><h4>Jean Todt</h4><p>Built Peugeot Talbot Sport from scratch in October 1981, orchestrating Group B, Dakar, and Le Mans dynasties.</p></div>
+      </div>
+      <div class="champ-card">
+        <img src="assets/photos/drv_kankkunen.jpg" alt="Juha Kankkunen" loading="lazy" />
+        <div><span class="tag">1986 WRC Champion</span><h4>Juha Kankkunen</h4><p>Delivered Peugeot's second consecutive WRC Drivers' &amp; Manufacturers' double in the 205 T16 Evo 2.</p></div>
+      </div>
+    </div>
+
+    <div class="titles reveal">
+      <div class="title"><b>1985</b><span>WRC Manufacturers' &amp; Drivers' titles — Timo Salonen</span></div>
+      <div class="title"><b>1986</b><span>WRC Manufacturers' &amp; Drivers' titles — Juha Kankkunen</span></div>
+    </div>
+
+    <h3 class="sub reveal">Key Drivers &amp; Leadership</h3>
+    <ul class="drivers reveal">
+      <li>Ari Vatanen</li><li>Timo Salonen</li><li>Juha Kankkunen</li><li>Bruno Saby</li>
+      <li>Michèle Mouton</li><li>Carlos Reutemann</li><li>Jean Todt <i>(founder &amp; director)</i></li>
+    </ul>
+  </section>
+
+  <!-- ============ 4. 1987 — DAKAR RAID & PIKES PEAK ============ -->
+  <section id="era-1987" class="era" data-era="1987" data-division="PEUGEOT TALBOT SPORT" data-years="1987 — 1990">
+    <div class="era-head reveal">
+      <h2>Desert &amp; <em>Mountain</em></h2>
+      <p class="era-years">1987 — 1990 · Rally Raid &amp; Hill Climb</p>
+      <p class="lede">When Group B was banned, Peugeot Talbot Sport turned its Turbo 16 hardware toward the world's toughest extremes: the Sahara sands of the <strong>Paris–Dakar</strong> and the 14,115-foot gravel summit of <strong>Pikes Peak</strong>.</p>
+    </div>
+
+    <div class="era-showcase burst-right">
+      <div class="cars reveal">
+        <article class="car-card"><span class="tag">1987–1988 · Camel Yellow</span><h3>205 T16 Grand Raid</h3><p>Stretched wheelbase, huge fuel tanks, and long-travel desert suspension. Ari Vatanen won the Paris–Dakar at Peugeot's very first attempt in 1987; Juha Kankkunen repeated in 1988.</p></article>
+        <article class="car-card"><span class="tag">1988–1990 · ~600+ hp · 4WS</span><h3>405 Turbo 16</h3><p>Vatanen set a 10:47.22 Pikes Peak record in 1988 (immortalised in <em>Climb Dance</em>), followed by Robby Unser's 1989 win. Vatanen also won the 1989 (after Todt's 10-franc coin toss with Jacky Ickx) and 1990 Dakars.</p></article>
+      </div>
+      <div class="car-burst from-right" data-burst="right">
+        <div class="burst-streak"></div>
+        <img class="cutout-car" src="assets/cutouts/cutout_405t16.png" alt="Ari Vatanen's #2 Peugeot 405 Turbo 16 Pikes Peak cutout" loading="lazy" />
+        <div class="burst-shadow"></div>
+        <span class="burst-caption">#2 Peugeot 405 Turbo 16 Pikes Peak — 600+ hp, 4WS, Climb Dance legend</span>
+      </div>
+    </div>
+
+    <div class="champ-strip reveal">
+      <div class="champ-card">
+        <img src="assets/photos/drv_vatanen.jpg" alt="Ari Vatanen" loading="lazy" />
+        <div><span class="tag">3× Peugeot Dakar · 1988 Pikes Peak</span><h4>Ari Vatanen</h4><p>Master of both desert and mountain — three Paris–Dakar crowns (1987, 1989, 1990) and the legendary 1988 Pikes Peak ascent.</p></div>
+      </div>
+    </div>
+
+    <div class="titles reveal">
+      <div class="title"><b>4×</b><span>Consecutive Paris–Dakar victories, 1987–1990</span></div>
+      <div class="title"><b>1988</b><span>Pikes Peak record — Ari Vatanen (10:47.22)</span></div>
+      <div class="title"><b>1989</b><span>Pikes Peak overall winner — Robby Unser</span></div>
+    </div>
+
+    <h3 class="sub reveal">Drivers</h3>
+    <ul class="drivers reveal"><li>Ari Vatanen</li><li>Juha Kankkunen</li><li>Jacky Ickx</li><li>Robby Unser</li><li>Björn Waldegård</li></ul>
+  </section>
+
+  <!-- ============ 5. 1990 — 905 AT LE MANS ============ -->
+  <section id="era-1990" class="era" data-era="1990" data-division="PEUGEOT SPORT · VÉLIZY" data-years="1990 — 1993">
+    <div class="era-head reveal">
+      <h2>The <em>905</em> at Le Mans</h2>
+      <p class="era-years">1990 — 1993 · World Sportscar &amp; Le Mans</p>
+      <p class="lede">In July 1990 the team moved to Vélizy-Villacoublay and became <strong>Peugeot Sport</strong>. Built to Formula 1-style 3.5-litre V10 Group C regulations, the carbon-monocoque 905 delivered Peugeot's first outright Le Mans crowns.</p>
+    </div>
+
+    <div class="era-showcase burst-left">
+      <div class="car-burst from-left" data-burst="left">
+        <div class="burst-streak"></div>
+        <img class="cutout-car" src="assets/cutouts/cutout_905.png" alt="1993 Peugeot 905 Evo 1 Ter Le Mans Group C cutout" loading="lazy" />
+        <div class="burst-shadow"></div>
+        <span class="burst-caption">1993 Peugeot 905 Evo 1 Ter — 3.5L V10 Group C Le Mans champion</span>
+      </div>
+      <div class="cars reveal">
+        <article class="car-card"><span class="tag">1990 · 3.5L V10</span><h3>Peugeot 905</h3><p>Screaming naturally aspirated 3.5-litre V10 wrapped in a Dassault-assisted carbon chassis, sporting classic PTS four-color swishes over white and Esso blue.</p></article>
+        <article class="car-card"><span class="tag">1991–1993 · Group C</span><h3>905 Evo 1 Bis</h3><p>Radically reworked aerodynamics with a towering bi-plane wing package. Swept the 1992 World Sportscar Championship and locked out the entire 1993 Le Mans podium.</p></article>
+      </div>
+    </div>
+
+    <div class="champ-strip reveal">
+      <div class="champ-card">
+        <img src="assets/photos/drv_warwick.jpg" alt="Derek Warwick" loading="lazy" />
+        <div><span class="tag">1992 Le Mans &amp; WSC Champion</span><h4>Derek Warwick</h4><p>Anchored Peugeot's breakthrough 1992 24 Hours of Le Mans victory and World Sportscar title alongside Yannick Dalmas &amp; Mark Blundell.</p></div>
+      </div>
+    </div>
+
+    <div class="titles reveal">
+      <div class="title"><b>1992</b><span>Le Mans &amp; WSC Champions — Derek Warwick, Yannick Dalmas, Mark Blundell</span></div>
+      <div class="title"><b>1993</b><span>Le Mans 1-2-3 Sweep — Geoff Brabham, Christophe Bouchut, Éric Hélary</span></div>
+    </div>
+
+    <h3 class="sub reveal">Drivers</h3>
+    <ul class="drivers reveal">
+      <li>Derek Warwick</li><li>Yannick Dalmas</li><li>Mark Blundell</li><li>Philippe Alliot</li>
+      <li>Geoff Brabham</li><li>Christophe Bouchut</li><li>Éric Hélary</li>
+      <li>Mauro Baldi</li><li>Jean-Pierre Jabouille</li><li>Thierry Boutsen</li><li>Karl Wendlinger</li><li>Keke Rosberg</li>
+    </ul>
+  </section>
+
+  <!-- ============ 6. 1994 — FORMULA 1 V10s ============ -->
+  <section id="era-1994" class="era" data-era="1994" data-division="PEUGEOT SPORT · F1" data-years="1994 — 2000">
+    <div class="era-head reveal">
+      <h2>Formula 1 <em>V10s</em></h2>
+      <p class="era-years">1994 — 2000 · Formula 1 Engine Supplier</p>
+      <p class="lede">The 905's V10 architecture translated straight onto the Formula 1 grid. Across <strong>115 Grands Prix</strong> and <strong>14 podiums</strong>, Peugeot powered McLaren, Jordan, and Alain Prost's all-French squad.</p>
+    </div>
+
+    <div class="era-showcase burst-right">
+      <div class="cars reveal">
+        <article class="car-card"><span class="tag">1994 · 8 Podiums</span><h3>McLaren MP4/9</h3><p>Peugeot's Formula 1 debut in iconic dayglo red and white, scoring eight podium finishes in a single season with Mika Häkkinen and Martin Brundle.</p></article>
+        <article class="car-card"><span class="tag">1995–1997 · 5 Podiums</span><h3>Jordan 195–197</h3><p>Three competitive seasons highlighted by Barrichello &amp; Irvine's famous 2nd–3rd double podium in Montreal 1995 and strong 1997 yellow "Buzzin' Hornets" pace.</p></article>
+        <article class="car-card"><span class="tag">1998–2000 · 1 Podium</span><h3>Prost AP01–AP03</h3><p>An all-French alliance in Gauloises blue, capped by Jarno Trulli's memorable 2nd-place finish at the rain-soaked 1999 European Grand Prix.</p></article>
+      </div>
+      <div class="car-burst from-right" data-burst="right">
+        <div class="burst-streak"></div>
+        <img class="cutout-car" src="assets/cutouts/cutout_f1.png" alt="1997 Jordan 197 Peugeot A14 V10 Formula 1 car on track cutout" loading="lazy" />
+        <div class="burst-shadow"></div>
+        <span class="burst-caption">1997 Jordan 197 Peugeot A14 V10 — #11 on track in iconic yellow livery</span>
+      </div>
+    </div>
+
+    <div class="champ-strip reveal">
+      <div class="champ-card">
+        <img src="assets/photos/drv_hakkinen.jpg" alt="Mika Häkkinen" loading="lazy" />
+        <div><span class="tag">1994 McLaren-Peugeot · 6 Podiums</span><h4>Mika Häkkinen</h4><p>Led Peugeot's maiden F1 campaign with six podiums in the MP4/9 — including 2nd place at Spa-Francorchamps.</p></div>
+      </div>
+    </div>
+
+    <h3 class="sub reveal">Drivers</h3>
+    <ul class="drivers reveal">
+      <li>Mika Häkkinen</li><li>Martin Brundle</li><li>Rubens Barrichello</li><li>Eddie Irvine</li>
+      <li>Giancarlo Fisichella</li><li>Ralf Schumacher</li><li>Jarno Trulli</li>
+      <li>Olivier Panis</li><li>Jean Alesi</li><li>Nick Heidfeld</li>
+    </ul>
+  </section>
+
+  <!-- ============ 7. 1999 — 206 WRC YEARS ============ -->
+  <section id="era-1999" class="era" data-era="1999" data-division="PEUGEOT SPORT · WRC" data-years="1999 — 2005">
+    <div class="era-head reveal">
+      <h2>The <em>206 WRC</em> Years</h2>
+      <p class="era-years">1999 — 2005 · World Rally Championship</p>
+      <p class="lede">Returning to the WRC with the razor-agile <strong>206 WRC</strong> — crowned by the bold 1998 solid chrome lion stretching across its silver flanks — Peugeot captured three consecutive Manufacturers' titles.</p>
+    </div>
+
+    <div class="era-showcase burst-left">
+      <div class="car-burst from-left" data-burst="left">
+        <div class="burst-streak"></div>
+        <img class="cutout-car" src="assets/cutouts/cutout_206wrc.png" alt="Peugeot 206 WRC flying sideways at Rally Sweden cutout" loading="lazy" />
+        <div class="burst-shadow"></div>
+        <span class="burst-caption">Peugeot 206 WRC in full flight — 24 WRC wins &amp; 3 straight Manufacturers' crowns</span>
+      </div>
+      <div class="cars reveal">
+        <article class="car-card"><span class="tag">1999–2003 · 24 WRC Wins</span><h3>206 WRC</h3><p>Turbocharged 2.0L, four-wheel drive, built on a chassis so short Peugeot produced 4,000 units of the road-going 206 GT with extended front and rear bumpers to meet the 4.00 m FIA minimum length. Tarmac ace Gilles Panizzi even pulled a mid-stage 360° donut en route to winning Catalunya 2002.</p></article>
+        <article class="car-card"><span class="tag">2004–2005 · Marlboro Red</span><h3>307 WRC</h3><p>Successor based on the 307 CC coupé-cabriolet, adding three more WRC victories with Marcus Grönholm before Peugeot pivoted back to Le Mans.</p></article>
+      </div>
+    </div>
+
+    <div class="champ-strip reveal">
+      <div class="champ-card">
+        <img src="assets/photos/drv_gronholm.jpg" alt="Marcus Grönholm" loading="lazy" />
+        <div><span class="tag">2000 &amp; 2002 WRC Champion</span><h4>Marcus Grönholm</h4><p>Two-time World Rally Champion with Peugeot Sport, defining the 206 WRC "Silver Bullet" era across gravel and snow.</p></div>
+      </div>
+    </div>
+
+    <div class="titles reveal">
+      <div class="title"><b>2000 · 01 · 02</b><span>Three straight WRC Manufacturers' titles</span></div>
+      <div class="title"><b>2000 · 2002</b><span>WRC Drivers' titles — Marcus Grönholm</span></div>
+    </div>
+
+    <h3 class="sub reveal">Drivers</h3>
+    <ul class="drivers reveal">
+      <li>Marcus Grönholm</li><li>Gilles Panizzi</li><li>Didier Auriol</li>
+      <li>Richard Burns</li><li>Harri Rovanperä</li><li>François Delecour</li><li>Markko Märtin</li>
+    </ul>
+  </section>
+
+  <!-- ============ 8. 2007 — 908 HDi FAP ============ -->
+  <section id="era-2007" class="era" data-era="2007" data-division="PEUGEOT SPORT · LMP1" data-years="2007 — 2011">
+    <div class="era-head reveal">
+      <h2>Diesel <em>Thunder</em></h2>
+      <p class="era-years">2007 — 2011 · Le Mans &amp; ILMC</p>
+      <p class="lede">Whisper-quiet yet brutally torquey, the closed-cockpit <strong>908 HDi FAP</strong> paired exposed carbon weave with a 5.5-litre V12 turbodiesel to break Audi's stranglehold at La Sarthe.</p>
+    </div>
+
+    <div class="era-showcase burst-right">
+      <div class="cars reveal">
+        <article class="car-card"><span class="tag">2007–2010 · 5.5L V12 Diesel</span><h3>908 HDi FAP</h3><p>Over 700 hp and 1,200 Nm of torque filtered through dual particulate traps. Captured the 2007 Le Mans Series, the iconic 2009 Le Mans 1-2 victory, and the inaugural 2010 ILMC title.</p></article>
+        <article class="car-card"><span class="tag">2011 · 3.7L V8 Diesel</span><h3>Peugeot 908</h3><p>All-new regulation-change V8 prototype wearing the 2010 sculpted bimetallic lion — dominating the 2011 Intercontinental Le Mans Cup with six wins from seven rounds.</p></article>
+      </div>
+      <div class="car-burst from-right" data-burst="right">
+        <div class="burst-streak"></div>
+        <img class="cutout-car" src="assets/cutouts/cutout_908.png" alt="2009 Le Mans winning #9 Peugeot 908 HDi FAP on track cutout" loading="lazy" />
+        <div class="burst-shadow"></div>
+        <span class="burst-caption">2009 Le Mans Winner — #9 Peugeot 908 HDi FAP (5.5L V12 Turbodiesel)</span>
+      </div>
+    </div>
+
+    <div class="champ-strip reveal">
+      <div class="champ-card">
+        <img src="assets/photos/drv_wurz.jpg" alt="Alexander Wurz" loading="lazy" />
+        <div><span class="tag">2009 Le Mans Champion</span><h4>Alexander Wurz</h4><p>Shared the winning #9 Peugeot 908 HDi FAP with Marc Gené &amp; David Brabham to deliver Peugeot's third Le Mans victory.</p></div>
+      </div>
+    </div>
+
+    <div class="titles reveal">
+      <div class="title"><b>2009</b><span>Le Mans 1-2 — Marc Gené, David Brabham, Alexander Wurz (2nd: Bourdais, Sarrazin, Montagny)</span></div>
+      <div class="title"><b>2010 · 2011</b><span>Back-to-back Intercontinental Le Mans Cup Champions</span></div>
+    </div>
+
+    <h3 class="sub reveal">Drivers</h3>
+    <ul class="drivers reveal">
+      <li>Marc Gené</li><li>David Brabham</li><li>Alexander Wurz</li><li>Sébastien Bourdais</li>
+      <li>Stéphane Sarrazin</li><li>Franck Montagny</li><li>Pedro Lamy</li>
+      <li>Nicolas Minassian</li><li>Anthony Davidson</li><li>Simon Pagenaud</li><li>Jacques Villeneuve</li>
+    </ul>
+  </section>
+
+  <!-- ============ 9. 2013 — PIKES PEAK & DAKAR RETURN ============ -->
+  <section id="era-2013" class="era" data-era="2013" data-division="PEUGEOT SPORT · EXTREMES" data-years="2013 — 2018">
+    <div class="era-head reveal">
+      <h2>Return to the <em>Extremes</em></h2>
+      <p class="era-years">2013 — 2018 · Pikes Peak &amp; Dakar</p>
+      <p class="lede">Twenty-five years after <em>Climb Dance</em>, Peugeot returned to Colorado with an 875-hp monster — then unleashed a radical two-wheel-drive desert buggy to dominate the South American Dakar.</p>
+    </div>
+
+    <div class="era-showcase burst-left">
+      <div class="car-burst from-left" data-burst="left">
+        <div class="burst-streak"></div>
+        <img class="cutout-car" src="assets/cutouts/cutout_3008dkr.png" alt="Peugeot 3008 DKR jumping airborne over desert dunes cutout" loading="lazy" />
+        <div class="burst-shadow"></div>
+        <span class="burst-caption">Peugeot 3008 DKR airborne — 2WD desert dominator (2016–2018 Dakar hat-trick)</span>
+      </div>
+      <div class="cars reveal">
+        <article class="car-card"><span class="tag">2013 · 875 hp / 875 kg</span><h3>208 T16 Pikes Peak</h3><p>3.2L twin-turbo V6, 0–100 km/h in 1.8 s, 0–200 km/h in 4.8 s, borrowing rear-wing aero DNA from the 908. Sébastien Loeb shattered the Pikes Peak record in 8:13.878.</p></article>
+        <article class="car-card"><span class="tag">2015–2018 · 2WD Buggy</span><h3>2008 / 3008 DKR &amp; Maxi</h3><p>Long-travel two-wheel-drive desert racers that conquered Dakar three years straight — including a 2017 Peugeot 1-2-3 sweep (Peterhansel, Loeb, Despres) and Carlos Sainz's 2018 triumph in the wider 3008 DKR Maxi.</p></article>
+      </div>
+    </div>
+
+    <div class="champ-strip reveal">
+      <div class="champ-card">
+        <img src="assets/photos/drv_loeb.jpg" alt="Sébastien Loeb" loading="lazy" />
+        <div><span class="tag">2013 Pikes Peak Record · 8:13.878</span><h4>Sébastien Loeb</h4><p>Nine-time WRC Champion who obliterated the Pikes Peak record by over 90 seconds in the 208 T16.</p></div>
+      </div>
+      <div class="champ-card">
+        <img src="assets/photos/drv_peterhansel.jpg" alt="Stéphane Peterhansel" loading="lazy" />
+        <div><span class="tag">2016 &amp; 2017 Dakar Champion</span><h4>Stéphane Peterhansel</h4><p>"Mr. Dakar" led Peugeot's 2008 DKR &amp; 3008 DKR dominance with back-to-back desert crowns and the 2017 1-2-3 sweep.</p></div>
+      </div>
+    </div>
+
+    <div class="titles reveal">
+      <div class="title"><b>8:13.878</b><span>2013 Pikes Peak outright record — Sébastien Loeb</span></div>
+      <div class="title"><b>2016 · 17 · 18</b><span>Three straight Dakar wins — Peterhansel (×2) &amp; Sainz</span></div>
+    </div>
+
+    <h3 class="sub reveal">Drivers</h3>
+    <ul class="drivers reveal"><li>Sébastien Loeb</li><li>Stéphane Peterhansel</li><li>Carlos Sainz</li><li>Cyril Despres</li></ul>
+  </section>
+
+  <!-- ============ OUTRO ============ -->
+  <section id="outro" data-era="outro" data-division="PEUGEOT SPORT" data-years="SINCE 1981">
+    <div class="outro-inner reveal">
+      <h2>The story continues.</h2>
+      <p>From the gravel of Corsica to the Mulsanne straight — the lion keeps roaring.</p>
+      <div class="outro-actions">
+        <a href="#nine-x-eight" class="cta">
+          <span>Back to the 9X8</span>
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+        </a>
+        <a href="#intro" class="cta ghost">
+          <span>Replay Intro</span>
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  Fan-made motorsport history showcase. Historical photography sourced from Wikimedia Commons (CC / Public Domain). Background emblems are stylised, era-inspired artworks.
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
